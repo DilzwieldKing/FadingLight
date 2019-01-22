@@ -1,5 +1,6 @@
 //The code is based upon the fade example under examples.
 
+//Starting variables for each PWM LED
 int ledOne = 3;
 int ledTwo = 5;
 int ledThree = 6;
@@ -19,6 +20,7 @@ int fadeAmountFour = 5;
 int fadeAmountFive = 5;
 int fadeAmountSix = 5;
 
+//Sets each LED as an output
 void setup() {
   pinMode(ledOne, OUTPUT);
   pinMode(ledTwo, OUTPUT);
@@ -28,7 +30,7 @@ void setup() {
   pinMode(ledSix, OUTPUT);
 }
 
-// the loop routine runs over and over again forever:
+// Increases the brightness variable by the fade variable, when it reaches a certain value within the if loop it starts subtracting it until it reaches 0 and the loop repeats.
 void loop() {
   analogWrite(ledOne, brightnessOne);
   analogWrite(ledTwo, brightnessTwo);
